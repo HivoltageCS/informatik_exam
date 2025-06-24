@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kryptering 101</title>
+<link rel="icon" type="image/x-icon" href="D:\downloads\favicon.ico">
+</head>
+<style>
+body {
+  background-image: url('https://github.com/HivoltageCS/informatik_exam/blob/main/image_2025-06-24_192934290.png?raw=true');
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+
+P {
+
+}
+
+}
+div {
+  width:1000px;
+  margin:0px;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(0 0 0 / 80%);
+  color:floralwhite
+}
+</style>
+background=
+<body>
+<h1 style="color:floralwhite; background-color:#7DF9FF; -webkit-text-stroke-width: 0.45px; -webkit-text-stroke-color: black;">Kryptering - En oversigt</h1>
+<div>
+    <h2>Hvad er kryptering?</h2>
+<p>Kryptering er en form for databeskyttelse, som virker ved at data omdannes til en hemmelig kode som kun giver mening ved brug af en krypteringsnøgle.
+    krypteringsnøglen opbevares sikkert på den maskine som skal modtage at afkode dataen, men hvis en dårlig aktør forsøger at opsnappe dataen undervejs
+     uden krypteringsnøglen kan de ikke afkode og dermed forstå dataen.</p>
+</div>
+
+<br>
+<br>
+
+<div>
+<h2>Hvornår bruges kryptering?</h2>
+<p>I et netværk bruges kryptering ind mellem server og bruger. Hos Serveren findes en "Public key" som kan bruges til at kryptere dataen. 
+    Dataen er så ulæselig indtil en bruger modtager dataen. Brugeren har en "Secret key", som har evnen til at afkode den krypterede data. Dataen afkodes og vises derefter. 
+    Da "secret key"'en ikke er offentligt distribueret kan kun dem der er blevet autoriserede (og derfor har en secret key) aflæse dataen, mens dårlige aktører der forsøger 
+    at tilgå dataen ikke vil kunne bruge dataen da de ikke har en nøgle til at gøre det læseligt.</p>    
+</div>
+
+<br>
+<br>
+
+<div>
+<h2>CIA-Modellen</h2>
+<p>CIA-Modellen er en opbygningsmodel inden for kryptering. CIA står for:</p>
+<p>C - Confidentiality - Fortrolighed - Dataen er fortrolig og lækkes ikke</p>
+<p>I - Integrity - Integritet - Dataen ændres ikke</p>
+<p>A - Availability - Tilgængelighed - Informationen kan tilgås af autoriserede brugere</p>
+<img src="https://github.com/HivoltageCS/informatik_exam/blob/main/ciatriad.jpg?raw=true" alt="CIA-Modellen" width="600" height="360">
+<p>Det er vigtigt, at jeres Krypteringsalgoritme følger disse tre punkter, hvis I skal bruge den til følsomme oplysninger eller forretningshemmeligheder.</p>
+</div>
+
+<br>
+<br>
+
+<div>
+ <h2>Eksempler på kryptering</h2>  
+ <h3>Uesugi-koden</h3>
+ <img SRC="https://github.com/HivoltageCS/informatik_exam/blob/main/image_2025-06-24_202108579.png?raw=true" alt="Uesugi-koden" width="225" height="225">
+ <p>Udviklet af Uesugi Kenshin under Sengoku-perioden. En kodet besked angives i tal, og en soldat kan derefter via tabellen afkode beskeden. Det største problem med 
+    tidlige krypteringsformer var, at en officer skulle tabe deres kopi af nøglen, og at den derfor kunne falde i fjendtlige hænder. Derfor opfylder Uesugi-Koden ikke 
+    nødvendigvis "Confidentiality" princippet, da den kun blev brugt tilbage i den tidlige moderne periode. Det kan også forekomme at to ord har samme afkodning da 
+    Uesugi-koden ikke inkluderer lyde som har "dakuten" (dvs. konsonanten har ændret sig til stemt). Derfor skal man en gang imellem omformulere sætninger hvis man skal 
+    opfylde "integrity" princippet. "Availability" konceptet konceptet opfyldes derimod da det kun kræves at et stykke papir med tabellen distribueres</p>
+ <h3>Cæsar-kryptering</h3>
+  <img SRC="https://github.com/HivoltageCS/informatik_exam/blob/main/Untitled-1.jpg?raw=true" alt="Cæsar-kryptering">
+ <p>Cæsar-kryptering er en meget basis form for kryptering. Cæsar-kryptering fungerer ved at man har et bogstav. F.eks. bogstavet A, og så rykker man et par pladser frem. 
+    Man kan rykke eks. 3 pladser så bogstavet A lige pludselig bliver til D, B bliver til E osv.</p>
+<p>Cæsar-koden er en forskydningskode. Det betyder derfor at bogstaver stadig kommer til at forekomme i samme frekvens. Det vil altså sige, at et bogstav kommer til at 
+    forekomme i samme hyppighed som det bogstav den bruges til at skjule gør i den reelle tekst. Til at afkode simple koder som forskydningskoder kan man derfor bruge 
+    frekvensanalyse til at se hvor ofte et bogstaqv forekommer i teksten, sammenlignet med hvor ofte bogstaver forekommer i normal tekst. Feks. er e det hyppigste bogstav 
+    på dansk, og man ville derfor i en frekvensanalyse af en forskydningskode kunne regne ud hvilket bogstav står for e ved at finde ud af hvilket bogstav der forekommer flest 
+   gange i koden. Derfor opfylder simple koder som forskydningskoder ikke "Confidentiality" princippet, da det er en meget simpel kodeform at afkode.
+   <br> Koden opfylder derimod "Integrity" fronten, da det kun kræves at man ved hvor meget man skal rykke i alfabetet for at kunne aflæse den korrekt.
+   <br>Koden opfylder også "Availability", da det er simpelt at afkode koden og kun kræver at man kender forskydningen.
+</div>
+
+<br>
+<br>
+
+<div>
+<h2>Mulige fremtidsløsninger inden for kryptering</h2>
+<p>Hyppigere udskiftning af krypteringsnøgle, dvs. at din krypteringsnøgle efter en bestemt periode vil blive ændret/udskiftet vha. software opdateringer. På den måde 
+    holder man krypteringen frisk, og den er på den måde sikrere fra hackerangreb.</p>
+</div>
+
