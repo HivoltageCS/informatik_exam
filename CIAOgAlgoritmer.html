@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kryptering 101</title>
+<link rel="icon" type="image/x-icon" href="D:\downloads\favicon.ico">
+<style>
+body {
+  background-image: url('https://github.com/HivoltageCS/informatik_exam/blob/main/image_2025-06-24_192934290.png?raw=true');
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+div {
+  width:1000px;
+  margin:0px;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(0 0 0 / 80%);
+  color:floralwhite
+}
+
+.dropbtn {
+  background-color: #7DF9FF;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #43888b;
+}
+</style>
+</head>
+<body>
+<h1 style="color:floralwhite; background-color:#7DF9FF; -webkit-text-stroke-width: 0.45px; -webkit-text-stroke-color: black;">Kryptering - En oversigt</h1>
+
+<br>
+<br>
+
+<div class="dropdown">
+  <button class="dropbtn">Vælg side</button>
+  <div class="dropdown-content">
+  <a href="#">Introduktion</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  </div>
+</div>
+
+
+<div>
+<h2>CIA-Modellen</h2>
+<p>CIA-Modellen er en opbygningsmodel inden for kryptering. CIA står for:</p>
+<p>C - Confidentiality - Fortrolighed - Dataen er fortrolig og lækkes ikke</p>
+<p>I - Integrity - Integritet - Dataen ændres ikke</p>
+<p>A - Availability - Tilgængelighed - Informationen kan tilgås af autoriserede brugere</p>
+<img src="https://github.com/HivoltageCS/informatik_exam/blob/main/ciatriad.jpg?raw=true" alt="CIA-Modellen" width="600" height="360">
+<p>Det er vigtigt, at jeres Krypteringsalgoritme følger disse tre punkter, hvis I skal bruge den til følsomme oplysninger eller forretningshemmeligheder.</p>
+</div>
+
+<br>
+<br>
+
+<div>
+ <h2>Eksempler på kryptering</h2>  
+ <h3>Uesugi-koden</h3>
+ <img SRC="https://github.com/HivoltageCS/informatik_exam/blob/main/image_2025-06-24_202108579.png?raw=true" alt="Uesugi-koden" width="225" height="225">
+ <p>Udviklet af Uesugi Kenshin under Sengoku-perioden. En kodet besked angives i tal, og en soldat kan derefter via tabellen afkode beskeden. Det største problem med 
+    tidlige krypteringsformer var, at en officer skulle tabe deres kopi af nøglen, og at den derfor kunne falde i fjendtlige hænder. Derfor opfylder Uesugi-Koden ikke 
+    nødvendigvis "Confidentiality" princippet, da den kun blev brugt tilbage i den tidlige moderne periode. Det kan også forekomme at to ord har samme afkodning da 
+    Uesugi-koden ikke inkluderer lyde som har "dakuten" (dvs. konsonanten har ændret sig til stemt). Derfor skal man en gang imellem omformulere sætninger hvis man skal 
+    opfylde "integrity" princippet. "Availability" konceptet konceptet opfyldes derimod da det kun kræves at et stykke papir med tabellen distribueres</p>
+ <h3>Cæsar-kryptering</h3>
+  <img SRC="https://github.com/HivoltageCS/informatik_exam/blob/main/Untitled-1.jpg?raw=true" alt="Cæsar-kryptering">
+ <p>Cæsar-kryptering er en meget basis form for kryptering. Cæsar-kryptering fungerer ved at man har et bogstav. F.eks. bogstavet A, og så rykker man et par pladser frem. 
+    Man kan rykke eks. 3 pladser så bogstavet A lige pludselig bliver til D, B bliver til E osv.</p>
+<p>Cæsar-koden er en forskydningskode. Det betyder derfor at bogstaver stadig kommer til at forekomme i samme frekvens. Det vil altså sige, at et bogstav kommer til at 
+    forekomme i samme hyppighed som det bogstav den bruges til at skjule gør i den reelle tekst. Til at afkode simple koder som forskydningskoder kan man derfor bruge 
+    frekvensanalyse til at se hvor ofte et bogstaqv forekommer i teksten, sammenlignet med hvor ofte bogstaver forekommer i normal tekst. Feks. er e det hyppigste bogstav 
+    på dansk, og man ville derfor i en frekvensanalyse af en forskydningskode kunne regne ud hvilket bogstav står for e ved at finde ud af hvilket bogstav der forekommer flest 
+   gange i koden. Derfor opfylder simple koder som forskydningskoder ikke "Confidentiality" princippet, da det er en meget simpel kodeform at afkode.
+   <br> Koden opfylder derimod "Integrity" fronten, da det kun kræves at man ved hvor meget man skal rykke i alfabetet for at kunne aflæse den korrekt.
+   <br>Koden opfylder også "Availability", da det er simpelt at afkode koden og kun kræver at man kender forskydningen.
+</div>
+
+</html>
